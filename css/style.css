@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+.taskbar{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(45, 73, 133, 0.15);
+  backdrop-filter: blur(5px);
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.icons img {
+  width: 30px;
+  margin-right: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.icons img:hover {
+  transform: translateY(-10%);
+  transition: transform 0.1s ease-in;
+}
+.icons img:active{
+    background-color: rgba(45, 73, 133, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+
+.noti-panel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  width: 10%;
+}
+.noti-panel img{
+  height: 17px;
+  filter: invert(1);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.window-panel{
+  height: 70%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(45, 73, 133, 0.3);
+  backdrop-filter: blur(7px);
+  z-index: 200;
+  position: absolute;
+  left: 35%;
+  top: 24%;
+  border-radius: 8px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  z-index: 99;
+  transition: 0.4s linear;
+  transform: translateY(110%);
+}
+
+.window-panel.show{
+  transform: translateY(0%);
+}
+.input{
+  background: rgb(3, 24, 70);
+  padding: 8px;
+  width: 90%;
+  position: absolute;
+  top: 5%;
+  border-bottom: 2px solid rgb(30, 168, 223);;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+}
+.input i{
+  color: rgb(30, 168, 223);
+  margin-right: 2px;
+}
+.input input{
+  background: rgb(3, 24, 70);
+  border: 0;
+  color: #fff;
+}
+.input input::placeholder{
+  color: #fff;
+  opacity: 0.7;
+}
+.input input:focus{
+  outline: none;
+}
+
+.pinned{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  padding: 0px 30px;
+}
+.pinned h5{
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 400;
+  margin: 0;
+}
+.btn{
+  background-color: rgba(45, 73, 133, 0.3);
+  backdrop-filter: blur(4px);
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 10px;
+  padding: 5px 10px;
+  font-weight: 400;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.panel-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 30%;
+}
+.panel-icons img{
+  height: 40px;
+  cursor: pointer;
+  margin: 7px 10px;
+  transition: transform 0.2s ease-in;
+}
+.panel-icons img:hover{
+  transform: scale(1.5);
+}
+.recommend{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 25%;
+  padding: 0px 30px;
+}
+.recommend h5{
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 400;
+  margin: 0;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom:0%;
+  padding: 0px 30px;
+  background-color: rgba(2, 36, 109, 0.3);
+  backdrop-filter: blur(4px);
+  height: 50px;
+}
+.profile h5{
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 400;
+  margin: 0;
+  font-size: 12px;
+}
+.profile img{
+  height: 15px;
+  filter: invert(1);
+  cursor: pointer;
+}
